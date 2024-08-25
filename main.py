@@ -22,6 +22,7 @@ logging.basicConfig(
 )
 
 API_TOKEN = config.token
+API_IMAGES = config.images
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 #register_handlers(dp)
