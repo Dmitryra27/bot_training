@@ -3,7 +3,7 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-import config
+#import config
 from images import router
 from images import register_handlers
 import os
@@ -21,14 +21,21 @@ logging.basicConfig(
     ]
 )
 
-API_TOKEN = config.token
-API_IMAGES = config.images
+API_TOKEN = os.getenv('token')#config.token
+API_IMAGES = os.getenv('images')#config.images
+
+
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 #register_handlers(dp)
 dp.include_router(router)
 
-
+if not API_TOKEN:
+    logging.error("Telegram API token не установлен. Проверьте переменные окружения.")
+    exit(1)
+if not API_IMAGES:
+    logging.error("Путь к изображениям не установлен. Проверьте переменные окружения.")
+    exit(1)
 
 @dp.message(Command("start"))
 async def command_start(message: types.Message):
