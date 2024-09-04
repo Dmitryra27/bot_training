@@ -10,3 +10,5 @@ tornado~=6.4.1
 tornado~=6.4.1
 
 aiogram~=3.12.0
+
+aiohttp~=3.10.5

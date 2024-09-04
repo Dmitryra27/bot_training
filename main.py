@@ -5,7 +5,7 @@ from aiogram.filters.command import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 import config
 from images import router
-from images import register_handlers
+
 import os
 log_dir = 'logs'
 if not os.path.exists(log_dir):
