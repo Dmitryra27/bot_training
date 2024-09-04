@@ -1,8 +1,9 @@
 import logging
 from aiogram import Router, types, F
 import requests
-import config
-API_IMAGES = config.images
+import os
+#import config
+API_IMAGES =  os.getenv('images')#config.images
 # Создаем объект Router для обработки сообщений
 router = Router()
 # Обработчик кнопки "Найти картинку"

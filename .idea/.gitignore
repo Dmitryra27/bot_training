@@ -7,4 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 config.py
+config1.py
 /logs/*
