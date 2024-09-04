@@ -6,6 +6,6 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-config.py
-config1.py
+./config.py
+./config1.py
 /logs/*
